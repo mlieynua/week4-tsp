@@ -1,5 +1,21 @@
 Build@Mercari 2020 Week4 - Travelling Salesman PRoblem Challenges.
 
+
+## アルゴリズム mysample.py
+***
+###  思いついたイメージ
+***
+<img src="./mysolution.jpg" width="700px">  
+
+座標後tを8グループに分け、隣り合ったグループに最も近い点（ex.a_nearbとb_neara）を繋ぐ。同じグループの隣り合ったグループに近い点(ex.a_nearb, a_neare)の中点と、その中点からグループ内の最も遠い点(ex.farcitya)を結ぶ直線を引く。
+図のように線を引く（a_neare →　直線の下側に存在する点 → farcitya →　直線の上側に存在する点 →　a_nearb）  
+その後2-opt法を使用する。
+
+### 反省点  
+***
+nが少ない時、グループに分けられないので、エラーが起こり、
+エラーの度に、その穴をふさぐような対処をしてしまったため、コードが無駄に長く汚くなってしまった。
+
 This is forked from [https://github.com/hayatoito/google-step-tsp-2016](https://github.com/hayatoito/google-step-tsp-2016).
 
 1. 問題
